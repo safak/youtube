@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-button {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal {
+  width: 600px;
+  height: 400px;
+  background-color: white;
+  position: absolute;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 10px 17px 6px rgba(0, 0, 0, 0.28);
+  box-shadow: 0px 10px 17px 6px rgba(0, 0, 0, 0.28);
+  display: none;
+}
+
+.cancel {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 5;
+  right: 5;
+  cursor: pointer;
+}
+
+.modal-left,
+.modal-right {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-left {
+  background: url("n.png") center;
+}
+
+.woman {
+  height: 100%;
+}
+
+.right {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.top-menu-item {
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.desc {
+  font-size: 14px;
+}
+
+.bottom-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.bottom-menu-item {
+  display: flex;
+  align-items: center;
+}
+
+.bottom-menu-icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+}
+
+.bottom-menu-text {
+  font-size: 14px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+input {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.submit {
+  border: none;
+  border-radius: 5px;
+  padding: 6px;
+  font-weight: 500;
+  background-color: #b6c4c7;
+  color: rgb(32, 16, 16);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 667px) {
+  .modal {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+  }
+  .modal-left,
+  .modal-right {
+    height: 50%;
+    width: 100%;
+  }
+  .right{
+    align-items: center;
+  }
+  .title{
+    text-align: center;
+  }
+}
