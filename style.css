@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  overflow: hidden;
+}
+
+.container {
+  width: 800px;
+  height: 100vh;
+  background-color: #111;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.top,
+.bottom {
+  width: 100%;
+  height: 50%;
+}
+
+.top {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #111),
+    url("media/top.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  width: 60%;
+}
+
+.bottom {
+  display: flex;
+}
+
+.left {
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), #111),
+    url("media/bottom-left.jpg");
+  background-size: cover;
+}
+.right {
+  width: 60%;
+  height: 100%;
+  position: relative;
+}
+
+.slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gradient {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), #111);
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.counter-container {
+  width: 10px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.counter-item {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.counter-item.active {
+  background-color: red;
+}
+
+.trailer {
+  width: 250px;
+  height: 150px;
+  border: 1px solid white;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  overflow: hidden;
+}
+
+.trailer-img {
+  width: 100%;
+  height: 100%;
+}
+
+.play {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  cursor: pointer;
+}
+
+.big-trailer {
+  width: 560px;
+  height: 315px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: none;
+}
+
+.cancel {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  cursor: pointer;
+  top: -14px;
+  right: -14px;
+}
+
+.video{
+    animation: move 30s linear forwards;
+}
+
+@keyframes move{
+    0%,100%{
+        height: 0;
+    }
+    50%{
+        height: 250%;
+    }
+}
