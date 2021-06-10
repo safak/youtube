@@ -1,0 +1,89 @@
+.topbar {
+  width: 100%;
+  height: 56px;
+  position: sticky;
+  top: 0;
+  background-color: #202020;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  border-bottom: 1px solid #444;
+  z-index: 999;
+}
+
+.topLeft {
+  flex: 3;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 20px;
+  margin-right: 5px;
+}
+
+.logoText {
+  font-weight: 500;
+  letter-spacing: -1px;
+  font-size: 20px;
+}
+
+.topCenter {
+  flex: 6;
+  height: 32px;
+  margin-right: 80px;
+}
+
+.topSearch {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.topSearch > input {
+  width: 574px;
+  height: 30px;
+  border: none;
+  padding-left: 10px;
+  background-color: black;
+}
+
+.topSearch > input::placeholder {
+  font-size: 16px;
+  color: #888;
+}
+
+.topSearchIconContainer {
+  height: 100%;
+  width: 65px;
+  background-color: #313131;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.topSearchIcon {
+  font-size: 20px !important;
+  color: #777;
+}
+
+.topRight {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.topIcon {
+  margin-right: 20px;
+}
+
+.topImg {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 40px;
+}

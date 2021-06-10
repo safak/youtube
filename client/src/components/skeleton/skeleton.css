@@ -1,0 +1,127 @@
+.postSk {
+  width: 274px;
+  margin-right: 12px;
+  margin-bottom: 30px;
+  animation: skeleton 1s ease infinite alternate;
+}
+
+@keyframes skeleton {
+  to {
+    opacity: 0.5;
+  }
+}
+
+.postSkImg {
+  background-color: #313131;
+  width: 274px;
+  height: 153px;
+}
+
+.postSkInfo {
+  display: flex;
+  margin-top: 15px;
+}
+
+.postSkAvatar {
+  background-color: #313131;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.postSkDetail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.postSkText {
+  background-color: #313131;
+  width: 90%;
+  height: 20px;
+  margin-bottom: 5px;
+}
+
+.postSkText.sm {
+  width: 50%;
+}
+
+.topSk {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  animation: skeleton 1s ease infinite alternate;
+}
+
+.topSkIcon {
+  margin-right: 20px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #313131;
+}
+
+.topSkImg {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 40px;
+  background-color: #313131;
+}
+
+.menuSk {
+  animation: skeleton 1s ease infinite alternate;
+}
+
+.menuSkItem {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #313131;
+  margin-top: 40px;
+}
+
+.circle,
+.custom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom {
+  flex-direction: column;
+}
+
+.balls {
+  display: flex;
+}
+
+.ball {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 10px;
+  animation: ball 0.5s ease infinite alternate;
+}
+
+.ball2 {
+  animation-delay: 0.1s;
+}
+
+.ball3 {
+  animation-delay: 0.2s;
+}
+
+@keyframes ball {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+.customTet {
+  font-weight: 100;
+}
