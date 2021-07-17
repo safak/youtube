@@ -52,7 +52,7 @@
   cursor: pointer;
 }
 
-.sidebarSocial {
+.sidebarSocials {
   margin-top: 15px;
   width: 250px;
   display: flex;
@@ -62,5 +62,6 @@
 
 .sidebarIcon {
   font-size: 16px;
-  margin-left: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
