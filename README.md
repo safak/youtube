@@ -4,7 +4,7 @@ To connect your VPS server, you can use your server IP, you can create a root pa
 
 ## Creating SSH Key
 
-### For MAC OS / Linux
+### For MAC OS / Linux / Windows 10 (with openssh)
 
 1. Launch the Terminal app.
 2. ```ssh-keygen -t rsa```
