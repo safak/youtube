@@ -1,4 +1,4 @@
-import "./app.css";
+import "./App.css";
 import { useEffect, useMemo, useState } from "react";
 import Start from "./components/Start";
 import Timer from "./components/Timer";
