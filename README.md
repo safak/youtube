@@ -74,7 +74,9 @@ app.get('*', (req, res) => {
 
 6) Change your API URL in your React app.
 
-7) Run these codes.
+7) Set your environment variables on Heroku
+
+8) Run these codes.
 ```bash
 heroku login
 ```
