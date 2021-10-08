@@ -1,0 +1,98 @@
+.a {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.a-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+}
+
+.a-right {
+  flex: 1;
+}
+
+.a-card.bg {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background-color: #333;
+}
+
+.a-card {
+  width: 60%;
+  height: 70vh;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.a-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.a-award-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+}
+
+.a-title {
+  font-weight: 400;
+}
+
+.a-sub {
+  margin: 20px 0px;
+}
+
+.a-desc{
+    font-weight: 300;
+}
+
+.a-award{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.a-award-texts{
+    width: 70%;
+}
+
+.a-award-title{
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width:480px) {
+    .a{
+      flex-direction: column;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .a-left {
+      width: 100%;
+    }
+
+    .a-card {
+      height: 30vh;
+    }
+
+    .a-card.bg, .a-award {
+      display: none;
+    }
+
+    .a-right{
+      padding: 20px;
+    }
+}
