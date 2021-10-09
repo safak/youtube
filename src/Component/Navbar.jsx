@@ -63,7 +63,7 @@ const Navbar = () => {
 
 </Left>	
 <Center>
-<Logo>LAMA.</Logo>
+<Logo>DONSA GEBEYA</Logo>
 </Center>	
 <Right>
 <MenuItem>REGISTER</MenuItem>
