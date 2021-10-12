@@ -22,6 +22,13 @@ export const sliderItems = [
 		desc: "DONT'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
 		bg: "F6A840",
 	}
+]
+export const categories = [
+	{
+		id: 1,
+		img: "https://images.pexels.com/photos/428340/pexels-photo-428340.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+		title: "SHIRT STYLE!",
+	}
 
 
 ]
