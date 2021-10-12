@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useState } from "react";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
+import { sliderItems } from "../Data";
 const Container = styled.div`
   width: 100%;
   height: 100vh;
@@ -89,36 +90,27 @@ const handleClick = (direction)=>{
         <ArrowLeftOutlined />
       </Arrow>
       <Wrapper>
-<Slide>
+{sliderItems.map(item => 
+
+(
+<Slide bg = {item.bg}>
 <ImgContainer>
-<Image src = "https://www.nicepng.com/png/full/8-88585_women-fashion-png-example-of-magazine-cover.png"/>
+<Image src = {item.img}/>
 </ImgContainer>
 <InfoContainer>
-<Title>SUMMER SALE</Title>
-<Desc>DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.</Desc>
+<Title>{item.title}</Title>
+<Desc>{item.desc}</Desc>
 <Button>SHOP NOW</Button>
 </InfoContainer>
 </Slide>
- <Slide bg = "fcf1ed">
-<ImgContainer>
-<Image src = "https://www.nicepng.com/png/full/8-88585_women-fashion-png-example-of-magazine-cover.png"/>
-</ImgContainer>
-<InfoContainer>
-<Title>WINTER SALE</Title>
-<Desc>DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.</Desc>
-<Button>SHOP NOW</Button>
-</InfoContainer>
-</Slide>
-<Slide bg="skyblue">
-<ImgContainer>
-<Image src = "https://www.nicepng.com/png/full/8-88585_women-fashion-png-example-of-magazine-cover.png"/>
-</ImgContainer>
-<InfoContainer>
-<Title>POPULAR SALE</Title>
-<Desc>DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.</Desc>
-<Button>SHOP NOW</Button>
-</InfoContainer>
-</Slide>
+)
+
+)
+
+}
+
+
+ 
 </Wrapper>
       <Arrow direction="right" onClick={()=>handleClick('right')}>
         <ArrowRightOutlined />
