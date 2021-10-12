@@ -48,7 +48,7 @@ export default function Product() {
                   <label>Product Name</label>
                   <input type="text" placeholder="Apple AirPod" />
                   <label>In Stock</label>
-                  <select name="inStock" id="idStock">
+                  <select name="inStock" id="inStock">
                       <option value="yes">Yes</option>
                       <option value="no">No</option>
                   </select>
