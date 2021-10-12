@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { useState } from "react";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
   position: relative;
+overflow: hidden;
 `;
 const Arrow = styled.div`
   width: 50px;
@@ -23,16 +25,20 @@ const Arrow = styled.div`
   margin: auto;
   cursor: pointer;
   opacity: 0.5;
+z-index: 2;
 `;
 const Wrapper = styled.div`
   height: 100%;
 height: 100vh;
 display: flex;
+transform: translateX(0vw);
 `;
 const Slide = styled.div`
 width: 100vw;
+height: 100vh;
 display: flex;
 align-items: center;
+background-color: #${props=>props.bg};
 `;
 const ImgContainer = styled.div`
 height: 100%;
@@ -71,9 +77,15 @@ cursor: pointer;
 
 
 const Slider = () => {
+const [slideIndex, setSlideIndex] =useState(0)
+const handleClick = (direction)=>{
+
+
+}
+
   return (
     <Container>
-      <Arrow direction="left">
+      <Arrow direction="left" onClick={()=>handleClick("left")}>
         <ArrowLeftOutlined />
       </Arrow>
       <Wrapper>
@@ -87,28 +99,28 @@ const Slider = () => {
 <Button>SHOP NOW</Button>
 </InfoContainer>
 </Slide>
- <Slide>
+ <Slide bg = "fcf1ed">
 <ImgContainer>
 <Image src = "https://www.nicepng.com/png/full/8-88585_women-fashion-png-example-of-magazine-cover.png"/>
 </ImgContainer>
 <InfoContainer>
-<Title>SUMMER SALE</Title>
+<Title>WINTER SALE</Title>
 <Desc>DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.</Desc>
 <Button>SHOP NOW</Button>
 </InfoContainer>
 </Slide>
-<Slide>
+<Slide bg="skyblue">
 <ImgContainer>
 <Image src = "https://www.nicepng.com/png/full/8-88585_women-fashion-png-example-of-magazine-cover.png"/>
 </ImgContainer>
 <InfoContainer>
-<Title>SUMMER SALE</Title>
+<Title>POPULAR SALE</Title>
 <Desc>DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.</Desc>
 <Button>SHOP NOW</Button>
 </InfoContainer>
 </Slide>
 </Wrapper>
-      <Arrow direction="right">
+      <Arrow direction="right" onClick={()=>handleClick('right')}>
         <ArrowRightOutlined />
       </Arrow>
     </Container>
