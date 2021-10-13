@@ -9,16 +9,13 @@ const listRoute = require("./routes/lists");
 
 dotenv.config();
 
-mongoose
-  .connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-  })
-  .then(() => console.log("DB Connection Successfull"))
-  .catch((err) => {
-    console.error(err);
-  });
+main().catch(err => console.log(err));
+
+async function main() {
+  await mongoose.connect(process.env.MONGO_URL)
+  .then(() => console.log("DB Connection Successful"))
+  .catch(err => console.error(err));
+}
 
 app.use(express.json());
 
