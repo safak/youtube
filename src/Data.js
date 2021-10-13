@@ -45,7 +45,7 @@ export const categories = [
 	},
 ];
 
-export const product = [
+export const popularProducts = [
 	{
 		id: 1,
 		img: "https://images.pexels.com/photos/9443286/pexels-photo-9443286.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
@@ -74,5 +74,9 @@ export const product = [
 	{
 		id: 7,
 		img: 'https://images.pexels.com/photos/5750478/pexels-photo-5750478.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'
+	},
+	{
+		id: 8,
+		img: 'https://images.pexels.com/photos/5948456/pexels-photo-5948456.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
 	}
 ]
