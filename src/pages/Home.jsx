@@ -11,9 +11,9 @@ const Home = () => {
       <Announcement />
       <Navbar />
       <Slider />
-<Categories/>
-<Products/>
-<NewsLetter/>
+      <Categories />
+      <Products />
+      <NewsLetter />
     </div>
   );
 };
