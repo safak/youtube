@@ -1,0 +1,52 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 50vh;
+  border-radius: 5px;
+  border: 0.5px solid lightseagreen;
+}
+
+.login {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 60%;
+  padding: 10px;
+  background-color: lightseagreen;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.username {
+  font-weight: bold;
+  color: lightseagreen;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+h2{
+  margin-bottom: 30px;
+  background-color: lightseagreen;
+  color: white;
+  padding: 3px 5px;
+  border-radius: 5px;
+}
