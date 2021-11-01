@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Environment
+The packages below should be installed
+* yarn
+* nodejs: 
+  * nodejs v16.8 has been tested
+  * if nodejs v17.0.1 is used, there are two issues: [issue1](https://github.com/facebook/create-react-app/issues/11565), [issue2](https://github.com/webpack/webpack/issues/14532)
+* react.js
+
 ## Available Scripts
 
 In the project directory, you can run:
