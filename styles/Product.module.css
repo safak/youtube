@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  padding: 120px 50px;
+}
+
+.cardL {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cardS {
+  flex: 1;
+}
+
+.imgContainer {
+  width: 30%;
+  margin: 5px;
+  position: relative;
+}
+
+.imgContainer:nth-child(3) {
+  border-top-right-radius: 50%;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 60px;
+  word-break: break-all;
+}
+
+.button {
+  padding: 15px;
+  border: none;
+  background-color: green;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    flex-direction: column-reverse;
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 50px;
+  }
+
+  .imgContainer {
+    width: 300px;
+    height: 300px;
+  }
+
+  .cardS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button {
+    margin: 20px 0px;
+  }
+
+  .imgContainer {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .cardL::before{
+    content: "Projects";
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}

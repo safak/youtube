@@ -1,0 +1,86 @@
+.container {
+  font-size: 18px;
+  height: 100vh;
+  padding-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.title {
+  text-align: center;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card {
+  width: 30%;
+}
+
+.comment {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.username {
+  font-weight: bold;
+  color: #555;
+}
+
+.jobTitle {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding-bottom: 20px;
+  }
+  .wrapper {
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container{
+    height: auto;
+    padding: 20px;
+  }
+
+  .title{
+    margin-bottom: 40px;
+    font-size: 50px;
+  }
+}

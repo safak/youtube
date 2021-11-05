@@ -1,0 +1,95 @@
+.container {
+  width: 100%;
+  height: calc(100vh - 50px);
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.card {
+  flex: 1;
+  padding: 100px;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}
+
+.circle {
+  width: 100vh;
+  height: 100vh;
+  border-radius: 50%;
+  opacity: 0.1;
+  position: absolute;
+  z-index: 999;
+}
+
+.circle1 {
+  background-color: #01c686;
+  right: -40vh;
+}
+
+.circle2 {
+  background-color: #b0ff49;
+  left: -50vh;
+  top: -50vh;
+}
+
+.title {
+  font-size: 50px;
+  margin: 0;
+}
+
+.brandName {
+  color: green;
+}
+
+.desc {
+  font-size: 20px;
+  margin: 0;
+}
+
+.button {
+  border: none;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100px;
+  cursor: pointer;
+  animation: button 1s ease infinite alternate;
+}
+
+@keyframes button {
+  to{
+    background-color: rgb(2, 63, 2);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .circle1 {
+    right: -50vh;
+    bottom: -50vh;
+  }
+
+  .card {
+    padding: 50px;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .desc {
+    display: none;
+  }
+}
