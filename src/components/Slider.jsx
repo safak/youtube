@@ -20,8 +20,8 @@ justify-content: center;
 position :absolute;
 top: 0;
 bottom : 0;
-left: ${props=> props.direction === "left" && "10px"};
-right: ${props=> props.direction === "right" && "10px"};
+left: ${props => props.direction === "left" && "10px"};
+right: ${props => props.direction === "right" && "10px"};
 
 cursor : pointer;
 opacity : 0.5;
@@ -79,37 +79,38 @@ const Slider = () => {
     return (
         <Container>
             <Arrow direction="left">
-                <ArrowLeftOutlined/>
+                <ArrowLeftOutlined />
             </Arrow>
             <Wrapper>
                 <Slide>
-                <ImgContainer>
-                <Image src="https://m.media-amazon.com/images/I/61ofltt9QzL._AC_UL1200_.jpg"/>
-                </ImgContainer>
-                <InfoContainer>
-                 <Title> SUMMER SALE </Title>
-                 <Description> DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS</Description>
-                 <Button>SHOP NOW</Button>
-                </InfoContainer>
+                    <ImgContainer>
+
+                        <Image src="/assets/images/fashion.jpg" />
+                    </ImgContainer>
+                    <InfoContainer>
+                        <Title> SUMMER SALE </Title>
+                        <Description> DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS</Description>
+                        <Button>SHOP NOW</Button>
+                    </InfoContainer>
                 </Slide>
                 <Slide>
-                <ImgContainer>
-                <Image src="https://i.ibb.co/XsdmR2c/1.png"/>
-                </ImgContainer>
-                <InfoContainer>
-                 <Title> SUMMER SALE </Title>
-                 <Description> DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS</Description>
-                 <Button>SHOP NOW</Button>
-                </InfoContainer>
+                    <ImgContainer>
+                        <Image src="'/assets/images/fashion.jpg" />
+                    </ImgContainer>
+                    <InfoContainer>
+                        <Title> SUMMER SALE </Title>
+                        <Description> DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS</Description>
+                        <Button>SHOP NOW</Button>
+                    </InfoContainer>
                 </Slide>
 
-                </Wrapper>
+            </Wrapper>
             <Arrow direction="right">
-                <ArrowRightOutlined/>
+                <ArrowRightOutlined />
             </Arrow>
         </Container>
 
-        
+
     )
 }
 
