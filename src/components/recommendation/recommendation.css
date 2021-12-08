@@ -1,0 +1,14 @@
+.recommendation{
+    margin-bottom: 20px;
+}
+
+.rightTitle{
+    font-weight: 300;
+}
+
+.rightImg{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    margin-top: 10px;
+}

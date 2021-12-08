@@ -1,0 +1,89 @@
+.update {
+  flex: 6;
+}
+
+.updateWrapper {
+  padding: 20px;
+}
+
+.delete {
+  border: none;
+  padding: 5px;
+  font-size: 12px;
+  background-color: rgb(243, 129, 152);
+  color: white;
+  font-weight: 500;
+  margin-top: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.updateTitle {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.updateContainer {
+  display: flex;
+  margin-top: 20px;
+  border-top: 1px solid lightgray;
+  padding-top: 10px;
+}
+
+form {
+  flex: 1;
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.formInput {
+  width: 40%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.profilePic{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.change{
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 13px;
+  color: teal;
+}
+
+.updateButton {
+  margin-top: 10px;
+  border: none;
+  padding: 5px  10px;
+  background-color: rgb(97, 161, 161);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.updateButton:disabled{
+  cursor: not-allowed;
+  background-color: rgb(136, 168, 168);
+}
+
+.error{
+  color: red;
+  font-size: 14px;
+  margin-left: 20px;
+}
+
+.success{
+  color: green;
+  font-size: 14px;
+  margin-left: 20px;
+}
