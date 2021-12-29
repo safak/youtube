@@ -20,7 +20,7 @@ export default function Menu({ menuOpen, setMenuOpen }) {
           <a href="#contact">Contact</a>
         </li> */}
         <li onClick={()=>setMenuOpen(false)}>
-          <a href="#path">Path</a>
+          <a href="#path">Career Timeline</a>
         </li>      
       </ul>
     </div>

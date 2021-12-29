@@ -42,8 +42,14 @@ export default function Path(){
       }];
   
       return (
+        <div style={{backgroundColor:'white'}}>  
+        <h1>Career Timeline</h1>
+        <Chrono  items={items} mode="VERTICAL"/>
+
         <div className="path" id="path">
-          <Chrono items={items} mode="VERTICAL"/>
+          <div style={{backgroundColor:'white', height:'200px'}}>
+          </div>
+        </div>
         </div>
       );
 }
