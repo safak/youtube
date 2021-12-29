@@ -2,12 +2,12 @@ import Topbar from "./components/topbar/Topbar";
 import Intro from "./components/intro/Intro"
 import Portfolio from "./components/portfolio/Portfolio"
 import Works from "./components/works/Works"
-import Testimonials from "./components/testimonials/Testimonials"
-import Contact from "./components/contact/Contact"
+// import Testimonials from "./components/testimonials/Testimonials"
+// import Contact from "./components/contact/Contact"
 import "./app.scss"
 import { useState } from "react";
 import Menu from "./components/menu/Menu";
-
+import Path from "./components/Path/Path";
 function App() {
   const [menuOpen,setMenuOpen] = useState(false)
   return (
@@ -18,8 +18,9 @@ function App() {
        <Intro/>
        <Portfolio/>
        <Works/>
-       <Testimonials/>
-       <Contact/>
+       {/* <Testimonials/> */}
+       {/* <Contact/> */}
+       <Path/>
      </div>
     </div>
   );
