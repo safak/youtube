@@ -22,6 +22,8 @@
       align-items: flex-end;
       justify-content: center;
       float: right;
+      transition-property: all;
+      transition-duration: 0.5s;
 
       @include mobile{
         align-items: flex-start;
@@ -34,6 +36,11 @@
           height: 50%;
         }
       }
+    }
+
+    .imgContainer:hover{
+      width: 750px;
+      height: 750px;
     }
   }
   .right {

@@ -26,6 +26,12 @@
         text-decoration: none;
         color: inherit;
         margin-right: 40px;
+        transition-property: all;
+        transition-duration: 0.5s;
+      }
+
+      .logo:hover{
+        font-size: 50px;
       }
 
       .itemContainer {
@@ -41,10 +47,19 @@
           font-size: 18px;
           margin-right: 5px;
         }
+        .icon:hover{
+          font-size: 23px;
+        }
 
         span {
           font-size: 15px;
           font-weight: 500;
+          transition-property: all;
+          transition-duration: 0.7s;
+        }
+        span:hover{
+          font-size:20px;
+
         }
       }
     }
