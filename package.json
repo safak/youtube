@@ -1,0 +1,26 @@
+{
+  "name": "restaurant",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@paypal/react-paypal-js": "^7.5.0",
+    "@reduxjs/toolkit": "^1.7.1",
+    "axios": "^0.24.0",
+    "cookie": "^0.4.1",
+    "mongoose": "^6.1.4",
+    "next": "12.0.7",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2"
+  },
+  "devDependencies": {
+    "eslint": "8.4.1",
+    "eslint-config-next": "12.0.7"
+  }
+}
