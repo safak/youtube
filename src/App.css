@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.APP{
+    /* background-color: aqua; */
+    background: linear-gradient(135deg, #FC466B, #3F5EFB);
+    height: 100%;
+    width: 100%;
+}
+.nav{
+
+}
+.main{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    align-items: center;
+}
+.intro{
+    height: 100vh;
+    width: 50vw;
+    flex: 1;
+    /* border: 2px solid green; */
+}
+.twitter{
+    flex: 1;
+    /* position: absolute; */
+    /* border: 2px solid black; */
+    height: 100vh;
+    width: 50vw;
+    margin-left: 100px;
+    margin-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 90px;
+}
