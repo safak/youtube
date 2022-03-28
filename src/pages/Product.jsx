@@ -127,13 +127,14 @@ const Product = () => {
         <InfoContainer>
           <Title>Denim Jumpsuit</Title>
           <Desc>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at
-            iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget
-            tristique tortor pretium ut. Curabitur elit justo, consequat id
-            condimentum ac, volutpat ornare.
+          Wash light and bright colors separately. Do not bleach. Do not twist/wring, warm iron to sequined, beaded, and delicate fabrics. Do not dry in direct sunlight.
+          Details are 
+          V neck,
+          Full sleeves,
+          Zipper at back,
+          Fabric: Grip.
           </Desc>
-          <Price>$ 20</Price>
+          <Price>Rs. 4,899</Price>
           <FilterContainer>
             <Filter>
               <FilterTitle>Color</FilterTitle>
