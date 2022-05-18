@@ -1,53 +1,53 @@
 export const Users = [
   {
     id:1,
-    profilePicture: "assets/person/1.jpeg",
-    username: "Safak Kocaoglu",
+    profilePicture: "https://f.hellowork.com/blogdumoderateur/2013/02/nyan-cat-gif-1.gif",
+    username: "une fille",
   },
   {
     id:2,
-    profilePicture: "assets/person/2.jpeg",
-    username: "Janell Shrum",
+    profilePicture: "https://c.tenor.com/zsP0bShJ5PsAAAAC/snk.gif",
+    username: "moi",
   },
   {
     id:3,
-    profilePicture: "assets/person/3.jpeg",
-    username: "Alex Durden",
+    profilePicture: "https://c.tenor.com/eeCV7mbY4l0AAAAC/nicky-larson.gif",
+    username: "Dora",
   },
   {
     id:4,
-    profilePicture: "assets/person/4.jpeg",
-    username: "Dora Hawks",
+    profilePicture: "https://i.pinimg.com/originals/b7/ff/d8/b7ffd803720bdd628ed684200acc4c71.gif",
+    username: "zoupzoup",
   },
   {
     id:5,
-    profilePicture: "assets/person/5.jpeg",
-    username: "Thomas Holden",
+    profilePicture: "https://i.pinimg.com/originals/f8/09/4e/f8094eda649d60e5a15c27252f88f8e6.gif",
+    username: "thomas",
   },
   {
     id:6,
-    profilePicture: "assets/person/6.jpeg",
-    username: "Shirley Beauchamp",
+    profilePicture: "https://thumbs.gfycat.com/DifferentImpureBorderterrier-size_restricted.gif",
+    username: "Shirley",
   },
   {
     id:7,
     profilePicture: "assets/person/7.jpeg",
-    username: "Travis Bennett",
+    username: "Travis ",
   },
   {
     id:8,
     profilePicture: "assets/person/8.jpeg",
-    username: "Kristen Thomas",
+    username: " Thomas a",
   },
   {
     id:9,
     profilePicture: "assets/person/9.jpeg",
-    username: "Gary Duty",
+    username: "Gary ",
   },
   {
     id:10,
     profilePicture: "assets/person/10.jpeg",
-    username: "Safak Kocaoglu",
+    username: "sonic",
   },
 ];
 
