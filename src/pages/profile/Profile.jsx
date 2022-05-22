@@ -15,18 +15,18 @@ export default function Profile() {
             <div className="profileCover">
               <img
                 className="profileCoverImg"
-                src="assets/post/3.jpeg"
+                src="https://64.media.tumblr.com/bff245925ee537755c3c3b1f9a3f2a7f/tumblr_oq9smvbNLz1vsjcxvo1_540.gifv"
                 alt=""
               />
               <img
                 className="profileUserImg"
-                src="assets/person/7.jpeg"
+                src="https://c.tenor.com/qGLb2A0tpIgAAAAC/unicorn.gif"
                 alt=""
               />
             </div>
             <div className="profileInfo">
-                <h4 className="profileInfoName">Safak Kocaoglu</h4>
-                <span className="profileInfoDesc">Hello my friends!</span>
+                <h4 className="profileInfoName">Moi</h4>
+                <span className="profileInfoDesc">Hello my Furred!</span>
             </div>
           </div>
           <div className="profileRightBottom">

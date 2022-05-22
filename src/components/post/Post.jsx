@@ -38,10 +38,10 @@ export default function Post({ post }) {
           <div className="postBottomLeft">
             <img className="likeIcon" src="assets/like.png" onClick={likeHandler} alt="" />
             <img className="likeIcon" src="assets/heart.png" onClick={likeHandler} alt="" />
-            <span className="postLikeCounter">{like} people like it</span>
+            <span className="postLikeCounter">{like} Gens qui aime</span>
           </div>
           <div className="postBottomRight">
-            <span className="postCommentText">{post.comment} comments</span>
+            <span className="postCommentText">{post.comment} commentaires</span>
           </div>
         </div>
       </div>
