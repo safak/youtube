@@ -1,7 +1,8 @@
+import CurrentLoans from "./components/CurrentLoans";
 import Home from "./pages/Home";
 
 const App = () => {
-  return <Home />;
+  return <CurrentLoans />;
 };
 
 export default App;

@@ -8,7 +8,8 @@
       "annualised_return": "8.60",
       "term_remaining": "864000",
       "ltv": "48.80",
-      "amount": "85,754"
+      "amount": "85,754",
+      "isInvest": false
     },
     {
       "id": "5",
@@ -18,7 +19,8 @@
       "annualised_return": "7.10",
       "term_remaining": "1620000",
       "ltv": "48.80",
-      "amount": "85,754"
+      "amount": "85,754",
+      "isInvest": false
     },
     {
       "id": "12",
@@ -28,7 +30,8 @@
       "annualised_return": "4.80",
       "term_remaining": "879000",
       "ltv": "48.80",
-      "amount": "85,754"
+      "amount": "85,754",
+      "isInvest": false
     }
   ]
 }

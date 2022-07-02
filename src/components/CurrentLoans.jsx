@@ -1,95 +1,79 @@
-import React from 'react'
-import styled from 'styled-components'
-import { loans } from '../currentLoans.json'
-import ModalA from '../components/ModalA'
-import ModalB from '../components/ModalB'
-import ModalC from '../components/ModalC'
-import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
+import { useEffect } from 'react';
+import { fetchData } from '../actions/app';
+import Prepositions from '../components/Prepositions';
+
+
+const CurrentLoansContainer = styled.div`
+    background: #FFFFFF;
+    width: 1440px;
+    height: 1024px;
+`;
 
 const Container = styled.div`
-    margin-top: 60px;
-    width: 100%;
+    width: 683px;
+    height: 24px;
+    padding: 13px 0 0 64px;
     display: flex;
-    position: relative;
-    overflow: hidden;
-    margin-left: 300px;
+    justify-content: space-between;
 `;
 
-const Wrapper = styled.div`
-    height: 100%;
-    display: flex;
+const ContainerTitle = styled.h1`
+    white-space: nowrap;
+    width: 369px;
+    height: 24px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #303247;
 `;
 
-const ImgContainer = styled.div`
-    height: 100%;
-    flex: 1;
-`;
-
-const InfoContainer = styled.div`
-    display: flex;
-    flex: 1;
-    padding: 50px;
-    flex-direction: column;
-`;
-
-const Title = styled.h1`
-    font-size: 25px;
-    font-weight: 700;
-    padding: 10px;
-`;
-
-const Button = styled.button`
-    width: 20%;
-    border: none;
-    padding: 13px 5px;
-    margin-left: 50px;
-    margin-bottom: 60px;
-    border-radius: 10px;
-    background-color: orange;
-    color: black;
-    cursor: pointer;
+const ContainerTitleDesc = styled.h1`
+    white-space: nowrap;
+    width: 369px;
+    height: 24px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #303247;
+    width: 96px;
+    height: 24px;
 `;
 
 const CurrentLoans = () => {
 
-const [openModalA, setOpenModalA] = useState(false);
-const [openModalB, setOpenModalB] = useState(false);
-const [openModalC, setOpenModalC] = useState(false);
+    const dispatch = useDispatch();
+    const loans = useSelector(state => state.app.loans);
+    const amount = useSelector(state => state.app.amount);
+
+    useEffect (() => {
+        dispatch(fetchData());
+    }, []);
+
+    const renderData = loans.map(item => {
+        return <Prepositions
+            key={item.id}
+            id={item.id}
+            isInvest={item.isInvest}
+            title={item.title}
+            tranche={item.tranche}
+            available={item.available}
+            term_remaining={item.term_remaining}
+        />
+    })
 
   return (
-    <Container>
-        <Wrapper>
-            <ImgContainer>
-                {loans.map(item => {
-                    return(
-                        <Title>
-                            Loan name {item.tranche}<br/>
-                            Loan details: {item.title}
-                        </Title>
-                )
-                })}
-            </ImgContainer>
-            <InfoContainer>
-                <Button onClick={() => {
-                    setOpenModalA(true);
-                    }}>INVEST A</Button>
-                {openModalA && <ModalA closeModalA ={setOpenModalA}/>}
-                <Button onClick={() => {
-                    setOpenModalB(true);
-                    }}>INVEST B</Button>
-                {openModalB && <ModalB closeModalB ={setOpenModalB}/>}
-                <Button onClick={() => {
-                    setOpenModalC(true);
-                    }}>INVEST C</Button>
-                {openModalC && <ModalC closeModalC ={setOpenModalC}/>}
-
-            </InfoContainer>
-        </Wrapper>
-    </Container>
-  )
+    <CurrentLoansContainer>
+        {renderData}
+        <Container>
+            <ContainerTitle>Total amount available for investment:</ContainerTitle>
+            <ContainerTitleDesc>${amount}</ContainerTitleDesc>
+        </Container>
+    </CurrentLoansContainer>
+  );
 }
 
-export default CurrentLoans
-
-//<Title>{loans[1].id * loans[2].id}</Title>
-{/* <CurrentLoanItem item = {item} key = {item.id}/> */}
+export default CurrentLoans;

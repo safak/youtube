@@ -2,14 +2,21 @@ import React from 'react'
 import styled from 'styled-components';
 
 const Container = styled.div`
-    height: 60px;
-    border-bottom: 1px solid grey;
+    display: flex;
+    height: 100px;
+    justify-content: flex-start;
+    background-color: white;
+    width: 100%;
+    border: 1px solid rgba(48, 50, 71, 0.1);
 `;
 
 const Title = styled.h1`
-    font-size: 25px;
-    font-weight: 700;
-    padding: 12px 25px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    color: #303247;
+    padding: 32px 64px;
 `;
 
 const Header = () => {

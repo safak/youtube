@@ -1,6 +1,8 @@
-import React from 'react'
 import styled from 'styled-components';
-import { loans } from '../currentLoans.json';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchData } from '../actions/app';
+import { useEffect } from 'react';
+
 
 const Container = styled.div`
     height: 30px;
@@ -14,9 +16,17 @@ const Title = styled.h1`
 `;
 
 const Footer = () => {
+
+    const dispatch = useDispatch();
+    const amount = useSelector(state => state.app.amount);
+
+    useEffect (() => {
+      dispatch(fetchData());
+    }, [])
+
   return (
     <Container>
-        <Title>Total amount available for investment: $ {loans[1].amount}</Title>
+        <Title>Total amount available for investment: $ {amount}</Title>
     </Container>
   )
 }
