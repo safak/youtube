@@ -90,7 +90,7 @@ const Prepositions = (props) => {
 
   return (
       <CardContainerMain>
-          {/* <CardInvested>{isInvest}</CardInvested> */}
+          <CardInvested>{isInvest}</CardInvested>
           <CardWrapper>
             <CardContainer>
                 <CardTitle>{title}</CardTitle>
