@@ -1,0 +1,13 @@
+.modal {
+	position: absolute;
+	width: 1440px;
+	height: 1024px;
+	left: 0px;
+	top: 0px;
+	background: rgba(26, 26, 26, 0.8);
+	transform: scale(0);
+}
+
+.modal.active {
+	transform: scale(1);
+}

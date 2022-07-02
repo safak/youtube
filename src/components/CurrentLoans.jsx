@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useEffect } from 'react';
 import { fetchData } from '../actions/app';
 import Prepositions from '../components/Prepositions';
-
+import Modal from './Modal';
 
 const CurrentLoansContainer = styled.div`
     background: #FFFFFF;
@@ -72,6 +72,7 @@ const CurrentLoans = () => {
             <ContainerTitle>Total amount available for investment:</ContainerTitle>
             <ContainerTitleDesc>${amount}</ContainerTitleDesc>
         </Container>
+        <Modal/>
     </CurrentLoansContainer>
   );
 }

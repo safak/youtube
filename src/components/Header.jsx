@@ -20,6 +20,7 @@ const Title = styled.h1`
 `;
 
 const Header = () => {
+    
   return (
       <Container>
           <Title>Current Loans</Title>
