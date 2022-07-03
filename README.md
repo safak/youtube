@@ -1,7 +1,7 @@
 # This is a test application for CHI Software
 Test project has completed using:
 - React Redux
-- Visual with styled components react
+- Visual with styled components React
 
 ## Legend
 
