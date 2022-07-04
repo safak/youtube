@@ -1,0 +1,1 @@
+export const convertingNumEu = (num) => + num.split(',').join('');

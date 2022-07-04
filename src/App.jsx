@@ -1,5 +1,9 @@
+import CurrentLoans from "./components/CurrentLoans";
+
 const App = () => {
-  return <div>Hello world!</div>;
+
+  return <CurrentLoans />;
+
 };
 
 export default App;
