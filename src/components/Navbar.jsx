@@ -5,7 +5,6 @@ import styled from 'styled-components'
 
 const Container = styled.div`
     height:60px;
-    background-image: linear-gradient(to right, fuchsia  , yellow);
 `
 const Wrapper = styled.div`
     padding: 10px 20px;
