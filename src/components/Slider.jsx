@@ -14,7 +14,6 @@ const Arrow = styled.div`
     width: 50px;
     height: 50px;
     display:flex;
-    scale: 2;
     align-items:center;
     justify-content:center;
     position:absolute;
