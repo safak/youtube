@@ -1,5 +1,7 @@
-import { ArrowLeftOutlined, ArrowRightOutlined} from "@material-ui/icons"
+import { ArrowBackRounded, ArrowForwardRounded, ArrowLeftOutlined, ArrowRightOutlined, DoubleArrow, KeyboardArrowLeftRounded} from "@material-ui/icons"
+import { useState } from "react"
 import styled from "styled-components"
+import {sliderItems} from "../data"
 
 const Container = styled.div`
     width: 100%;
@@ -11,9 +13,8 @@ const Container = styled.div`
 const Arrow = styled.div`
     width: 50px;
     height: 50px;
-    background-color:#e7e7e7;
-    border-radius: 50%;
     display:flex;
+    scale: 2;
     align-items:center;
     justify-content:center;
     position:absolute;
@@ -23,11 +24,13 @@ const Arrow = styled.div`
     right: ${props=> props.direction === "right" && "10px"};
     margin: auto;
     cursor:pointer;
-    opacity:0.5;
+    z-index: 2;
 `
 const Wrapper = styled.div`
     height:100%;
     display: flex;
+    transition: all 1.5s ease;
+    transform: translateX(${props=>props.slideIndex * -100}vw);
 `
 const Slides = styled.div`
     width: 100vw;
@@ -47,12 +50,13 @@ const InfoContainer = styled.div`
     flex: 1;
     padding: 50px;
 `
-const Title = styled.h1` 
-    font-size: 70px;
+const Title = styled.h1`
+    margin-top: -120px;
+    font-size: 60px;
 `
 const Desc = styled.p`
-    margin: 30px 0px;
-    font-size: 20px;
+    margin: 50px 0px;
+    font-size: 30px;
     font-weight: bolder;
     letter-spacing: 3px;
 `
@@ -64,49 +68,36 @@ const Button = styled.button`
 `
 
 const Slider = () => {
+    const [slideIndex, setSlideIndex] = useState(0);
+    const handleClick = (direction) => {
+
+        if(direction==="left"){
+            setSlideIndex(slideIndex > 0? slideIndex- 1 : 2)
+        } else{
+            setSlideIndex(slideIndex < 2 ? slideIndex +1 :0)
+        }
+    };
   return (
     <Container>
-        <Arrow direction="left">
-           <ArrowLeftOutlined/>
+        <Arrow direction="left" onClick={()=> handleClick("left")}>
+           <ArrowBackRounded/>
         </Arrow>
-        <Wrapper>
-            <Slides bg="f5fafd">
-                <ImageContainer>
-                    <Image src="https://static.nike.com/a/images/kumf9vyo5gtnhkodbvu9/white-black-red-chicago.png"/>
-                </ImageContainer>
-                <InfoContainer>
-                    <Title>SUPER SALE</Title>
-                    <Desc>Air Jordan I OG White / Black  —  Red Chicago At Flat 30% Off</Desc>
-                    <Button>SHOP NOW</Button>
-                </InfoContainer>
-            </Slides>
-
-            <Slides bg="fcf1ed">
-                <ImageContainer>
-                    <Image src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/0e1e2df5-aefe-40dd-8c36-07eb2ea3c777/air-jordan-3-retro-shoes-lnD0DV.png"/>
-                </ImageContainer>
-                <InfoContainer>
-                    <Title>SUPER SALE</Title>
-                    <Desc>Air Jordan I OG White / Black  —  Red Chicago At Flat 30% Off</Desc>
-                    <Button>SHOP NOW</Button>
-                </InfoContainer>
-            </Slides>
-
-            <Slides bg="fbf0f4">
-                <ImageContainer>
-                    <Image src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto/a7c1569d-c9f1-4a11-b3be-b6d9292ced79/air-jordan-5-retro-green-bean-shoes-KNZDfn.png"/>
-                </ImageContainer>
-                <InfoContainer>
-                    <Title>SUPER SALE</Title>
-                    <Desc>Air Jordan I OG White / Black  —  Red Chicago At Flat 30% Off</Desc>
-                    <Button>SHOP NOW</Button>
-                </InfoContainer>
-            </Slides>
-
-
+        <Wrapper slideIndex={slideIndex}>
+            {sliderItems.map((item=>
+                <Slides bg={item.bg}>
+                    <ImageContainer>
+                        <Image src={item.img}/>
+                    </ImageContainer>
+                    <InfoContainer>
+                        <Title>{item.title}</Title>
+                        <Desc>{item.desc}</Desc>
+                        <Button>SHOP NOW</Button>
+                    </InfoContainer>
+                </Slides>
+            ))}
         </Wrapper>
-        <Arrow direction="right">
-           <ArrowRightOutlined/>
+        <Arrow direction="right" onClick={()=> handleClick("right")}>
+            <ArrowForwardRounded/>
         </Arrow>
     </Container>
   )
