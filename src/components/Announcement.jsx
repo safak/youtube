@@ -1,22 +1,41 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 
+  const animation = keyframes`
+    0%{
+    transform: translateX(100px);
+    }
+    50%{
+      transform: translateX(500px);
+    }
+    75%{
+      transform: translateX(-500px);
+    }
+    100%{
+      transform: translateX(-100px);
+    }
+  `
 const Container = styled.div`
-    height: 20px;
-    margin-bottom: 60px;
-    margin-top: 20px;
-    background-image: linear-gradient(to right, fuchsia  , yellow);
+    height: 30px;
+    background-color: teal;
     color: white;
-    scale: 2;
     display:flex;
     align-items:center;
     justify-content:center;
     font-size: 14px;
     font-weight:bolder;
 `
+const Text = styled.h3`
+    animation-name: ${animation};
+    animation-duration: 20s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+`
 const Announcement = () => {
   return (
     <Container>
-        !!! Best Sellers !!! Super Deal !!! Free Shipping Over For Next 5 Days !!!
+      <Text>
+        | Best Sellers in Sports Fitness Outdoors | Up to 30% off | Top offers | All Brands |
+      </Text>
     </Container>
   )
 }
