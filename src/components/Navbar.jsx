@@ -29,7 +29,7 @@ const SearchContainer = styled.div`
     align-items:center;
     justify-content:center;
     margin-left: 25px;
-    margin-bottom:
+    margin-bottom: 0px;
     padding: 5px;
 `
 const Input = styled.input`

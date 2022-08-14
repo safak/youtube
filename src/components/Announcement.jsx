@@ -1,9 +1,12 @@
 import styled from "styled-components"
 
 const Container = styled.div`
-    height: 30px;
+    height: 20px;
+    margin-bottom: 60px;
+    margin-top: 20px;
     background-image: linear-gradient(to right, fuchsia  , yellow);
     color: white;
+    scale: 2;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -13,7 +16,7 @@ const Container = styled.div`
 const Announcement = () => {
   return (
     <Container>
-        Super Deal !!! Free Shipping Over For Next 5 Days !!!
+        !!! Best Sellers !!! Super Deal !!! Free Shipping Over For Next 5 Days !!!
     </Container>
   )
 }
