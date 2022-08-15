@@ -21,3 +21,6 @@ Product List Page -
 
 Selected Product Page -
 ![image](https://user-images.githubusercontent.com/70998986/184606412-b23412fc-0635-441a-945d-88fdb907d934.png)
+
+Cart Page -
+![image](https://user-images.githubusercontent.com/70998986/184606612-227819fb-f507-4197-8ae8-60b0cae40b0f.png)
