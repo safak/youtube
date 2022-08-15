@@ -9,3 +9,6 @@ Category Page -
 
 Top Products -
 ![image](https://user-images.githubusercontent.com/70998986/184605352-ee8beda0-bcb1-4f6e-86b6-11d670ecb530.png)
+
+NewsLetter and Footer -
+![image](https://user-images.githubusercontent.com/70998986/184605514-8045fc64-f54d-424f-8a36-0c6905ca32ec.png)
