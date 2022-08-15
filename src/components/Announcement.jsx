@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components"
+import { mobile } from "../responsive"
 
   const animation = keyframes`
     0%{
@@ -23,12 +24,14 @@ const Container = styled.div`
     justify-content:center;
     font-size: 14px;
     font-weight:bolder;
+    ${mobile({height :"20px",fontSize:"8px"})}
 `
 const Text = styled.h3`
     animation-name: ${animation};
     animation-duration: 20s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
+    ${mobile({animationDuration:"15s"})}
 `
 const Announcement = () => {
   return (
