@@ -12,3 +12,6 @@ Top Products -
 
 NewsLetter and Footer -
 ![image](https://user-images.githubusercontent.com/70998986/184605514-8045fc64-f54d-424f-8a36-0c6905ca32ec.png)
+
+Login/Register Page -
+![image](https://user-images.githubusercontent.com/70998986/184605749-f9fa0f3c-a7e7-41a4-96fe-c2f9b32fb4dd.png)
