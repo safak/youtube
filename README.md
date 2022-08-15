@@ -15,3 +15,6 @@ NewsLetter and Footer -
 
 Login/Register Page -
 ![image](https://user-images.githubusercontent.com/70998986/184605749-f9fa0f3c-a7e7-41a4-96fe-c2f9b32fb4dd.png)
+
+Selected Product Page -
+![image](https://user-images.githubusercontent.com/70998986/184606062-7f6e2f5e-5ee3-4c0f-87ef-3a6e4d67b459.png)
