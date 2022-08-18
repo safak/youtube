@@ -18,14 +18,16 @@ router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {
 
   try {
     const updatedUser = await User.findByIdAndUpdate(
-      req.params.id,
+      { _id: req.params.id },
       {
         $set: req.body,
       },
       { new: true }
     );
+    // console.log(updatedUser)
     res.status(200).json(updatedUser);
   } catch (err) {
+    // console.log(err)
     res.status(500).json(err);
   }
 });
@@ -85,7 +87,7 @@ router.get("/stats", verifyTokenAndAdmin, async (req, res) => {
         },
       },
     ]);
-    res.status(200).json(data)
+    res.status(200).json(data);
   } catch (err) {
     res.status(500).json(err);
   }
