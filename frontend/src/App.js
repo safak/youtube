@@ -1,5 +1,6 @@
 import "./app.css";
-import ReactMapGL, { Marker, Popup } from "react-map-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
+import Map, { Marker, Popup } from "react-map-gl";
 import { useEffect, useState } from "react";
 import { Room, Star, StarBorder } from "@material-ui/icons";
 import axios from "axios";
@@ -30,7 +31,7 @@ function App() {
   };
 
   const handleAddClick = (e) => {
-    const [longitude, latitude] = e.lngLat;
+    const {lng: longitude, lat: latitude} = e.lngLat;
     setNewPlace({
       lat: latitude,
       long: longitude,
@@ -75,12 +76,11 @@ function App() {
   };
 
   return (
-    <div style={{ height: "100vh", width: "100%" }}>
-      <ReactMapGL
-        {...viewport}
-        mapboxApiAccessToken=""
-        width="100%"
-        height="100%"
+    <div>
+      <Map
+        initialViewState={{ ...viewport }}
+        mapboxAccessToken=""
+        style={{ width: "100vw", height: "100vh" }}
         transitionDuration="200"
         mapStyle="mapbox://styles/safak/cknndpyfq268f17p53nmpwira"
         onViewportChange={(viewport) => setViewport(viewport)}
@@ -167,7 +167,7 @@ function App() {
                   />
                   <label>Description</label>
                   <textarea
-                    placeholder="Say us something about this place."
+                    placeholder="Tell us something about this place."
                     onChange={(e) => setDesc(e.target.value)}
                   />
                   <label>Rating</label>
@@ -211,7 +211,7 @@ function App() {
             myStorage={myStorage}
           />
         )}
-      </ReactMapGL>
+      </Map>
     </div>
   );
 }
