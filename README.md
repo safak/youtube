@@ -104,6 +104,10 @@ apt install ufw
 
 ```
 ufw enable
+
+```
+###to be able to access the server again through ssh, once you exited it.
+ufw allow ssh 
 ```
 
 ```
@@ -159,6 +163,11 @@ nano /var/www/netflix/index.html
 
 ```
 systemctl start nginx
+```
+###If you get 404 error, try this:
+
+```
+sudo systemctl reload nginx
 ```
 
 ## Uploading Apps Using Git
