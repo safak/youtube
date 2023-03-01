@@ -26,6 +26,10 @@ export default function Register() {
       history.push("/login");
     } catch (err) {}
   };
+  const handleLoginButton = (e) => {
+    console.log("handleLoginButton pressed")
+    history.push("/login");
+  }
   return (
     <div className="register">
       <div className="top">
@@ -35,7 +39,7 @@ export default function Register() {
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
             alt=""
           />
-          <button className="loginButton">Sign In</button>
+          <button className="loginButton" onClick={handleLoginButton}>Sign In</button>
         </div>
       </div>
       <div className="container">

@@ -67,12 +67,21 @@
         font-weight: 500;
         cursor: pointer;
       }
-
+      
       span {
-        color: lightgray;
-        b {
+        color: grey;
+        a {
           color: white;
+          text-decoration: none;
         }
+        // b {
+        //   color: white;
+        // }
+        
+      }
+
+      small {
+        color: grey;
       }
     }
   }
