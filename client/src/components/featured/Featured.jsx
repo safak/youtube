@@ -6,22 +6,52 @@ import "./featured.scss";
 export default function Featured({ type, setGenre }) {
   const [content, setContent] = useState({});
 
+  // useEffect(() => {
+  //   // Run! Like go get some data from an API.
+  //   const sampleContent = {
+  //     "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQipjRoAX0QiWWFHLI-swPDZc-UP3iqx1zHTo5Jy4rOYg&s",
+  //     "imgTitle":"CAR IMAGE"
+  //   }
+  //   setContent(sampleContent);
+  // }, []);
+
+
   useEffect(() => {
     const getRandomContent = async () => {
+      const type = "action";
       try {
         const res = await axios.get(`/movies/random?type=${type}`, {
           headers: {
             token:
-              "Bearer "+JSON.parse(localStorage.getItem("user")).accessToken,
+              "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
           },
         });
+        console.log("useEffect Register axios res success:", res);
         setContent(res.data[0]);
       } catch (err) {
-        console.log(err);
+        console.log("useEffect Register axios res err is", err);
       }
     };
     getRandomContent();
-  }, [type]);
+  }, [])
+
+
+  // useEffect(() => {
+  //   const getRandomContent = async () => {
+  //     try {
+  //       const res = await axios.get(`/movies/random?type=${type}`, {
+  //         headers: {
+  //           token:
+  //             "Bearer "+JSON.parse(localStorage.getItem("user")).accessToken,
+  //         },
+  //       });
+  //       setContent(res.data[0]);
+  //     } catch (err) {
+  //       console.log(err);
+  //     }
+  //   };
+  //   getRandomContent();
+  // }, [type]);
 
   console.log(content);
   return (

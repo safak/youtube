@@ -13,10 +13,14 @@ router.post("/register", async (req, res) => {
       process.env.SECRET_KEY
     ).toString(),
   });
+  console.log("registerPOST req is: ", req.body)
+  console.log("user is: ", newUser, newUser.username)
   try {
     const user = await newUser.save();
+    console.log("registerPOST createUser Success")
     res.status(201).json(user);
   } catch (err) {
+    console.log("error auth.js register", err)
     res.status(500).json(err);
   }
 });
@@ -24,8 +28,14 @@ router.post("/register", async (req, res) => {
 //LOGIN
 router.post("/login", async (req, res) => {
   try {
+    console.log("loginPOST res is: ", req.body, req.body.email)
     const user = await User.findOne({ email: req.body.email });
-    !user && res.status(401).json("Wrong password or username!");
+    console.log("loginPOST userFound: ", user)
+    if (!user) {
+      res.status(401).json("Wrong password or username!");
+      console.log("loginPOST userNotFoundInDB")
+      return;
+    }
 
     const bytes = CryptoJS.AES.decrypt(user.password, process.env.SECRET_KEY);
     const originalPassword = bytes.toString(CryptoJS.enc.Utf8);
@@ -43,7 +53,8 @@ router.post("/login", async (req, res) => {
 
     res.status(200).json({ ...info, accessToken });
   } catch (err) {
-    res.status(500).json(err);
+    // res.status(500).json(err);
+    console.log("error auth.js register: ", err);
   }
 });
 

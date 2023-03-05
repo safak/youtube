@@ -15,18 +15,26 @@ export default function Register() {
   const usernameRef = useRef();
 
   const handleStart = () => {
+    console.log("handleStart pressed")
     setEmail(emailRef.current.value);
   };
   const handleFinish = async (e) => {
     e.preventDefault();
-    setPassword(passwordRef.current.value);
-    setUsername(usernameRef.current.value);
+    console.log("handleFinish pressed")
+
+    // setPassword(passwordRef.current.value);
+    // setUsername(usernameRef.current.value);
+
+    const password = passwordRef.current.value;
+    const username = usernameRef.current.value;
     try {
+      console.log("handleFinish uname is: ", username, " pass is ", password)
       await axios.post("auth/register", { email,username, password });
       history.push("/login");
     } catch (err) {}
   };
   const handleLoginButton = (e) => {
+    e.preventDefault()
     console.log("handleLoginButton pressed")
     history.push("/login");
   }
@@ -39,7 +47,8 @@ export default function Register() {
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
             alt=""
           />
-          <button className="loginButton" onClick={handleLoginButton}>Sign In</button>
+          <button className="loginButton" onClick={handleLoginButton}>Sign Inn</button>
+         
         </div>
       </div>
       <div className="container">
@@ -54,6 +63,7 @@ export default function Register() {
             <button className="registerButton" onClick={handleStart}>
               Get Started
             </button>
+            
           </div>
         ) : (
           <form className="input">
