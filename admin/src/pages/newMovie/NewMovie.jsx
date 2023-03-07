@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import "./newMovie.css";
-import storage from "../../firebase";
+import storage from "../../firebase-config";
 import { createMovie } from "../../context/movieContext/apiCalls";
 import { MovieContext } from "../../context/movieContext/MovieContext";
 
@@ -21,7 +21,9 @@ export default function NewMovie() {
   };
 
   const upload = (items) => {
+    
     items.forEach((item) => {
+      //loop through items and upload to firebase
       const fileName = new Date().getTime() + item.label + item.file.name;
       const uploadTask = storage.ref(`/items/${fileName}`).put(item.file);
       uploadTask.on(
@@ -48,6 +50,7 @@ export default function NewMovie() {
 
   const handleUpload = (e) => {
     e.preventDefault();
+    //upload func upload data in parameter to firebase ref "/items"
     upload([
       { file: img, label: "img" },
       { file: imgTitle, label: "imgTitle" },

@@ -1,12 +1,15 @@
+//MIGRATION FROM V4 to V6
+//ROUTE COMPONENTS UPDATED
+
 import Sidebar from "./components/sidebar/Sidebar";
 import Topbar from "./components/topbar/Topbar";
 import "./app.css";
 import Home from "./pages/home/Home";
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
-  Redirect,
+  redirect,
+  Routes
 } from "react-router-dom";
 import UserList from "./pages/userList/UserList";
 import User from "./pages/user/User";
@@ -25,47 +28,37 @@ function App() {
   const { user } = useContext(AuthContext);
   return (
     <Router>
-      <Switch>
-        <Route path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
+      <Routes>
+        <Route path="/login" element={user ? redirect("/") : <Login />}/>
         {user && (
           <>
             <Topbar />
             <div className="container">
               <Sidebar />
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route path="/users">
-                <UserList />
-              </Route>
-              <Route path="/user/:userId">
-                <User />
-              </Route>
-              <Route path="/newUser">
-                <NewUser />
-              </Route>
-              <Route path="/movies">
-                <MovieList />
-              </Route>
-              <Route path="/movie/:movieId">
-                <Movie />
-              </Route>
-              <Route path="/newMovie">
-                <NewMovie />
-              </Route>
-              <Route path="/lists">
-                <ListList />
-              </Route>
-              <Route path="/list/:listId">
-                <List />
-              </Route>
-              <Route path="/newlist">
-                <NewList />
-              </Route>
+              <Route exact path="/" element={<Home/>}/>
+               
+              <Route path="/users" element={<UserList />}/>
+                
+              <Route path="/user/:userId" element={<User />}/>
+                
+              <Route path="/newUser" element={<NewUser />}/>
+               
+              <Route path="/movies" element={<MovieList />}/>
+         
+              <Route path="/movie/:movieId" element={<Movie />}/>
+              
+              <Route path="/newMovie" element={ <NewMovie />}/>
+         
+              <Route path="/lists" element={<ListList />}/>
+          
+              <Route path="/list/:listId" element={<List />}/>
+         
+              <Route path="/newlist" element={<NewList />}/>
+          
             </div>
           </>
         )}
-      </Switch>
+      </Routes>
     </Router>
   );
 }

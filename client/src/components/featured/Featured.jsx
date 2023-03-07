@@ -17,22 +17,22 @@ export default function Featured({ type, setGenre }) {
 
 
   useEffect(() => {
-    const getRandomContent = async () => {
-      const type = "action";
-      try {
-        const res = await axios.get(`/movies/random?type=${type}`, {
-          headers: {
-            token:
-              "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
-          },
-        });
-        console.log("useEffect Register axios res success:", res);
-        setContent(res.data[0]);
-      } catch (err) {
-        console.log("useEffect Register axios res err is", err);
-      }
-    };
-    getRandomContent();
+    // const getRandomContent = async () => {
+    //   const type = "action";
+    //   try {
+    //     const res = await axios.get(`/movies/random?type=${type}`, {
+    //       headers: {
+    //         token:
+    //           "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
+    //       },
+    //     });
+    //     console.log("useEffect getRandomContent axios res success:", res);
+    //     setContent(res.data[0]);
+    //   } catch (err) {
+    //     console.log("useEffect Register axios res err is", err);
+    //   }
+    // };
+    // getRandomContent();
   }, [])
 
 

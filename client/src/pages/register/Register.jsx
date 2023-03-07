@@ -1,14 +1,16 @@
 import axios from "axios";
 import { useRef } from "react";
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./register.scss";
 
 export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
-  const history = useHistory();
+  // const history = useHistory();
+  const navigate = useNavigate();
 
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -30,13 +32,16 @@ export default function Register() {
     try {
       console.log("handleFinish uname is: ", username, " pass is ", password)
       await axios.post("auth/register", { email,username, password });
-      history.push("/login");
+      // history.push("/login");
+      navigate("/login")
+
     } catch (err) {}
   };
   const handleLoginButton = (e) => {
     e.preventDefault()
     console.log("handleLoginButton pressed")
-    history.push("/login");
+    // history.push("/login");
+    navigate("/login")
   }
   return (
     <div className="register">
