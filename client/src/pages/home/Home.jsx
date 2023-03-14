@@ -11,6 +11,7 @@ const Home = ({ type }) => {
 
   useEffect(() => {
     const getRandomLists = async () => {
+      console.log("getRandomLists called");
       try {
         const res = await axios.get(
           `lists${type ? "?type=" + type : ""}${
@@ -23,9 +24,10 @@ const Home = ({ type }) => {
             },
           }
         );
+        console.log("getRandomLists success res.data is: ", res.data);
         setLists(res.data);
       } catch (err) {
-        console.log(err);
+        console.log("getRandomLists err: ",err);
       }
     };
     getRandomLists();
@@ -33,8 +35,9 @@ const Home = ({ type }) => {
 
   return (
     <div className="home">
-      <Navbar />
-      <Featured type={type} setGenre={setGenre} />
+      <p>dsadsads</p>
+      <Navbar /> 
+      { <Featured type={type} setGenre={setGenre} />}
       {lists.map((list) => (
         <List list={list} />
       ))}

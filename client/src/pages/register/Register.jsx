@@ -45,6 +45,7 @@ export default function Register() {
   }
   return (
     <div className="register">
+      <p>sadasdasds</p>
       <div className="top">
         <div className="wrapper">
           <img
