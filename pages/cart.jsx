@@ -1,6 +1,5 @@
-/*
-import styles from "../styles/Cart.module.css";
-import Image from "next/image";
+import Image from "next/image"
+import styles from "../styles/Cart.module.css"
 
 const Cart = () => {
   return (
@@ -91,8 +90,7 @@ const Cart = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Cart;
-*/
+export default Cart

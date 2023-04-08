@@ -1,17 +1,16 @@
-/*
-import styles from "../../styles/Product.module.css";
-import Image from "next/image";
-import { useState } from "react";
+import Image from "next/image"
+import { useState } from "react"
+import styles from "../../styles/Product.module.css"
 
 const Product = () => {
-  const [size, setSize] = useState(0);
+  const [size, setSize] = useState(0)
   const pizza = {
     id: 1,
     img: "/img/pizza.png",
     name: "CAMPAGNOLA",
     price: [19.9, 23.9, 27.9],
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis arcu purus, rhoncus fringilla vestibulum vel, dignissim vel ante. Nulla facilisi. Nullam a urna sit amet tellus pellentesque egestas in in ante.",
-  };
+  }
 
   return (
     <div className={styles.container}>
@@ -79,13 +78,12 @@ const Product = () => {
           </div>
         </div>
         <div className={styles.add}>
-            <input type="number" defaultValue={1} className={styles.quantity}/>
-            <button className={styles.button}>Add to Cart</button>
+          <input type="number" defaultValue={1} className={styles.quantity} />
+          <button className={styles.button}>Add to Cart</button>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Product;
-*/
+export default Product
