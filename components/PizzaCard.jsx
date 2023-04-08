@@ -1,6 +1,5 @@
-/*
-import Image from "next/image";
-import styles from "../styles/PizzaCard.module.css";
+import Image from "next/image"
+import styles from "../styles/PizzaCard.module.css"
 
 const PizzaCard = () => {
   return (
@@ -12,8 +11,7 @@ const PizzaCard = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default PizzaCard;
-*/
+export default PizzaCard
