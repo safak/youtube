@@ -1,3 +1,4 @@
+/*
 import styles from "../styles/Cart.module.css";
 import Image from "next/image";
 
@@ -94,3 +95,4 @@ const Cart = () => {
 };
 
 export default Cart;
+*/

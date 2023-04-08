@@ -1,3 +1,4 @@
+/*
 import styles from "../styles/PizzaList.module.css";
 import PizzaCard from "./PizzaCard"
 
@@ -25,3 +26,4 @@ const PizzaList = () => {
 };
 
 export default PizzaList;
+*/

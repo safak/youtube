@@ -1,3 +1,4 @@
+/*
 import styles from "../../styles/Product.module.css";
 import Image from "next/image";
 import { useState } from "react";
@@ -87,3 +88,4 @@ const Product = () => {
 };
 
 export default Product;
+*/

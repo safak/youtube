@@ -1,3 +1,4 @@
+/*
 import Image from "next/image";
 import styles from "../styles/PizzaCard.module.css";
 
@@ -15,3 +16,4 @@ const PizzaCard = () => {
 };
 
 export default PizzaCard;
+*/
