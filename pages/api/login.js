@@ -1,8 +1,8 @@
-import cookie from "cookie";
+import cookie from "cookie"
 
 const handler = (req, res) => {
   if (req.method === "POST") {
-    const { username, password } = req.body;
+    const { username, password } = req.body
     if (
       username === process.env.ADMIN_USERNAME &&
       password === process.env.ADMIN_PASSWORD
@@ -14,12 +14,12 @@ const handler = (req, res) => {
           sameSite: "strict",
           path: "/",
         })
-      );
-      res.status(200).json("Succesfull");
+      )
+      res.status(200).json("Successfull")
     } else {
-      res.status(400).json("Wrong Credentials!");
+      res.status(400).json("Wrong Credentials!")
     }
   }
-};
+}
 
-export default handler;
+export default handler
