@@ -9,6 +9,7 @@ function App() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
+  axios.defaults.baseURL = "api"
 
   const refreshToken = async () => {
     try {
