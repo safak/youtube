@@ -44,7 +44,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("login", { username, password });
+      const res = await axios.post("/login", { username, password });
       setUser(res.data);
     } catch (err) {
       console.log(err);
